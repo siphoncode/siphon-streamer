@@ -1,0 +1,12 @@
+---
+streamer:
+  build: .
+  container_name: streamer
+  tty: true
+  restart: always
+  ports:
+    - "443:443"
+  environment:
+    SIPHON_ENV: $SIPHON_ENV
+    RABBITMQ_HOST: $RABBITMQ_HOST
+    RABBITMQ_PORT: $RABBITMQ_PORT
